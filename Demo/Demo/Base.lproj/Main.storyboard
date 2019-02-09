@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wdg-se-h2I"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uuj-Eo-4rC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHE-7O-Ess">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="xPb-zB-48s">
+                                <rect key="frame" x="168" y="610" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.42655369639396667" green="0.47584608197212219" blue="0.48026475310325623" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soc-8u-J0l">
+                                <rect key="frame" x="137.5" y="30" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.19376453757286072" green="0.50850099325180054" blue="0.85232251882553101" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="C5M-Mi-7zS"/>
+                                    <constraint firstAttribute="width" constant="100" id="te1-6P-u6b"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="uMC-xP-b5f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                                <state key="normal" title="Normal"/>
+                                <state key="selected" title="Infinite">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapInfiniteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i8o-fy-Y6J"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Uuj-Eo-4rC" firstAttribute="top" secondItem="kHE-7O-Ess" secondAttribute="bottom" id="0rA-yc-4s9"/>
+                            <constraint firstItem="soc-8u-J0l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6oz-qp-EMs"/>
+                            <constraint firstAttribute="trailing" secondItem="kHE-7O-Ess" secondAttribute="trailing" id="IvE-xg-RSn"/>
+                            <constraint firstItem="kHE-7O-Ess" firstAttribute="top" secondItem="soc-8u-J0l" secondAttribute="bottom" constant="10" id="Kbh-ti-3ZI"/>
+                            <constraint firstItem="xPb-zB-48s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UJu-8x-nmJ"/>
+                            <constraint firstItem="Uuj-Eo-4rC" firstAttribute="top" secondItem="xPb-zB-48s" secondAttribute="bottom" constant="20" id="YWW-cs-rEk"/>
+                            <constraint firstItem="kHE-7O-Ess" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sCB-2h-GUA"/>
+                            <constraint firstItem="soc-8u-J0l" firstAttribute="top" secondItem="Wdg-se-h2I" secondAttribute="bottom" constant="10" id="xBd-e4-qLb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="xPb-zB-48s" id="vVr-yl-1eF"/>
+                        <outlet property="pageFrameView" destination="kHE-7O-Ess" id="fc0-5s-LuW"/>
+                        <outlet property="switchInfiniteButton" destination="soc-8u-J0l" id="aQX-fA-LA6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>
