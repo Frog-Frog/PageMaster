@@ -24,7 +24,7 @@ import PageViewController
 private let pageViewController = PageViewController([])
 
 private func setupPageViewController() {
-	self.pageViewController.pageDelegate = self
+    self.pageViewController.pageDelegate = self
     let vcList: [UIViewController] = [ /** Set your UIViewControllers */ ]
     self.pageViewController.setup(vcList)
     self.addChild(self.pageViewController)
@@ -37,10 +37,9 @@ private func setupPageViewController() {
 ### PageDelegate
 ```swift
 extension ViewController: PageViewControllerDelegate {
-
-	func pageViewController(_ vc: PageViewController, didChangePage page: Int) {
-		// Here you can create a process after changing the page.
-	}
+    func pageViewController(_ vc: PageViewController, didChangePage page: Int) {
+	// Here you can create a process after changing the page.
+    }
 }
 ```
 
