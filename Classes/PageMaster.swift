@@ -96,16 +96,13 @@ extension PageMaster {
     private func infinitePageDirection(from page: Int) -> UIPageViewController.NavigationDirection {
         let lastPage = self.vcList.count - 1
         if self.currentPage == lastPage && page == 0 {
-            // 最終ページから0ページ目に戻る時
             return .forward
         }
         
         if self.currentPage == 0 && page == lastPage {
-            // 最初のページから最終ページに戻る時
             return .reverse
         }
-        
-        // それ以外は通常
+    
         return self.normalPageDirection(from: page)
     }
 }
