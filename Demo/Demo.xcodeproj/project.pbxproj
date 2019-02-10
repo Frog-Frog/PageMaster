@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0416A189221077AC002DDF4D /* PageMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0416A18222106CB3002DDF4D /* PageMaster.framework */; };
+		0416A18A221077AC002DDF4D /* PageMaster.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0416A18222106CB3002DDF4D /* PageMaster.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04765E2F220EAAFF000AC346 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04765E2E220EAAFF000AC346 /* AppDelegate.swift */; };
 		04765E31220EAAFF000AC346 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04765E30220EAAFF000AC346 /* ViewController.swift */; };
 		04765E34220EAAFF000AC346 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04765E32220EAAFF000AC346 /* Main.storyboard */; };
@@ -32,6 +34,13 @@
 			remoteGlobalIDString = 04765E11220EAAE2000AC346;
 			remoteInfo = PageMasterTests;
 		};
+		0416A18B221077AC002DDF4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04765E65220EAB4B000AC346 /* PageMaster.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 04765E07220EAAE2000AC346;
+			remoteInfo = PageMaster;
+		};
 		04765E40220EAB01000AC346 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 04765E23220EAAFF000AC346 /* Project object */;
@@ -55,6 +64,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0416A18A221077AC002DDF4D /* PageMaster.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0416A189221077AC002DDF4D /* PageMaster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +200,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0416A18C221077AC002DDF4D /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -354,6 +366,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0416A18C221077AC002DDF4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PageMaster;
+			targetProxy = 0416A18B221077AC002DDF4D /* PBXContainerItemProxy */;
+		};
 		04765E41220EAB01000AC346 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 04765E2A220EAAFF000AC346 /* Demo */;
