@@ -18,7 +18,7 @@
 import UIKit
 
 public protocol PageMasterDelegate: class {
-    func pageViewController(_ vc: PageMaster, didChangePage page: Int)
+    func pageMaster(_ master: PageMaster, didChangePage page: Int)
 }
 
 public final class PageMaster: UIPageViewController {
@@ -27,7 +27,7 @@ public final class PageMaster: UIPageViewController {
     
     public private(set) var currentPage = 0 {
         didSet {
-            self.pageDelegate?.pageViewController(self, didChangePage: self.currentPage)
+            self.pageDelegate?.pageMaster(self, didChangePage: self.currentPage)
         }
     }
     

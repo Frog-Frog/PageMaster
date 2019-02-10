@@ -57,9 +57,9 @@ extension ViewController {
 }
 
 // MARK: - PageMasterDelegate
-extension ViewController: PageMasterDelegate {
+extension ViewController: PageMasterDelegate {    
     
-    func pageViewController(_ vc: PageMaster, didChangePage page: Int) {
+    func pageMaster(_ master: PageMaster, didChangePage page: Int) {
         self.pageControl.currentPage = page
     }
 }
