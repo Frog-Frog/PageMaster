@@ -7,23 +7,24 @@
 //
 
 import UIKit
-import PageViewController
+import PageMaster
 
 class ViewController: UIViewController {
 
     @IBOutlet private weak var pageFrameView: UIView! {
         willSet {
-            self.addChild(self.pageViewController)
-            newValue.addSubview(self.pageViewController.view)
-            newValue.fitToSelf(childView: self.pageViewController.view)
-            self.pageViewController.didMove(toParent: self)
+            self.addChild(self.pageMaster)
+            newValue.addSubview(self.pageMaster.view)
+            newValue.fitToSelf(childView: self.pageMaster.view)
+            self.pageMaster.didMove(toParent: self)
         }
     }
+    
     @IBOutlet private weak var pageControl: UIPageControl!
     
     @IBOutlet private weak var switchInfiniteButton: UIButton!
     
-    private let pageViewController = PageViewController([])
+    private let pageMaster = PageMaster([])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,7 @@ class ViewController: UIViewController {
     
     @IBAction private func didTapInfiniteButton(_ sender: UIButton) {
         sender.isSelected.toggle()
-        self.pageViewController.isInfinite.toggle()
+        self.pageMaster.isInfinite.toggle()
     }
 }
 
@@ -40,12 +41,12 @@ class ViewController: UIViewController {
 extension ViewController {
     
     private func setupPageViewController() {
-        self.pageViewController.pageDelegate = self
+        self.pageMaster.pageDelegate = self
         let vcList = [self.generateViewController(color: .red),
                       self.generateViewController(color: .blue),
                       self.generateViewController(color: .green)]
         self.pageControl.numberOfPages = vcList.count
-        self.pageViewController.setup(vcList)
+        self.pageMaster.setup(vcList)
     }
     
     private func generateViewController(color: UIColor) -> UIViewController {
@@ -55,9 +56,10 @@ extension ViewController {
     }
 }
 
-extension ViewController: PageViewControllerDelegate {
+// MARK: - PageMasterDelegate
+extension ViewController: PageMasterDelegate {
     
-    func pageViewController(_ vc: PageViewController, didChangePage page: Int) {
+    func pageViewController(_ vc: PageMaster, didChangePage page: Int) {
         self.pageControl.currentPage = page
     }
 }

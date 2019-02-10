@@ -1,13 +1,13 @@
 //
-//  PageViewController.swift
-//  PageViewController
+//  PageMaster.swift
+//  PageMaster
 //
 //  Created by Tomosuke Okada on 2019/02/09.
 //  Copyright © 2019 TomosukeOkada. All rights reserved.
 //
 
 /**
- [PageViewController]
+ [PageMaster]
  
  Copyright (c) [2019] [Tomosuke Okada]
  
@@ -17,11 +17,11 @@
 
 import UIKit
 
-public protocol PageViewControllerDelegate: class {
-    func pageViewController(_ vc: PageViewController, didChangePage page: Int)
+public protocol PageMasterDelegate: class {
+    func pageViewController(_ vc: PageMaster, didChangePage page: Int)
 }
 
-public final class PageViewController: UIPageViewController {
+public final class PageMaster: UIPageViewController {
     
     public private(set) var vcList = [UIViewController]()
     
@@ -37,7 +37,7 @@ public final class PageViewController: UIPageViewController {
     
     public var isInfinite = false
     
-    public weak var pageDelegate: PageViewControllerDelegate?
+    public weak var pageDelegate: PageMasterDelegate?
     
     public init(_ vcList: [UIViewController] = [], transitionStyle: UIPageViewController.TransitionStyle = .scroll, navigationOrientation: UIPageViewController.NavigationOrientation = .horizontal) {
         super.init(transitionStyle: transitionStyle, navigationOrientation: navigationOrientation, options: nil)
@@ -53,7 +53,7 @@ public final class PageViewController: UIPageViewController {
 }
 
 // MARK: - Public
-extension PageViewController {
+extension PageMaster {
     
     public func setup(_ vcList: [UIViewController]) {
         guard !vcList.isEmpty else {
@@ -72,7 +72,8 @@ extension PageViewController {
     }
 }
 
-extension PageViewController {
+// MARK: - Direction
+extension PageMaster {
     
     private func pageDirection(from page: Int) -> UIPageViewController.NavigationDirection {
         if self.isInfinite {
@@ -110,14 +111,8 @@ extension PageViewController {
 }
 
 // MARK: - Index
-extension PageViewController {
+extension PageMaster {
     
-    // MARK: 次のViewControllerのindexを取得する
-    
-    /// 次のViewControllerのindexを配列から探す(ループするため配列の最後だった場合は0を返す)
-    ///
-    /// - Parameter current: 表示中のViewController
-    /// - Returns: Index
     private func nextIndex(from current: UIViewController) -> Int? {
         guard let currentIndex = self.vcList.index(of: current) else {
             return nil
@@ -151,10 +146,6 @@ extension PageViewController {
         }
     }
     
-    /// 前のViewControllerのindexを配列から探す(ループするため0だったx場合は配列の最後を返す)
-    ///
-    /// - Parameter current: 表示中のViewController
-    /// - Returns: Index
     private func previousIndex(from current: UIViewController) -> Int? {
         guard let currentIndex = self.vcList.index(of: current) else {
             return nil
@@ -190,7 +181,7 @@ extension PageViewController {
 }
 
 // MARK: - UIPageViewControllerDataSource
-extension PageViewController: UIPageViewControllerDataSource {
+extension PageMaster: UIPageViewControllerDataSource {
     
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         if let previousIndex = self.previousIndex(from: viewController) {
@@ -208,7 +199,7 @@ extension PageViewController: UIPageViewControllerDataSource {
 }
 
 // MARK: - UIPageViewControllerDelegate
-extension PageViewController: UIPageViewControllerDelegate {
+extension PageMaster: UIPageViewControllerDelegate {
     
     public func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let current = pageViewController.viewControllers![0]

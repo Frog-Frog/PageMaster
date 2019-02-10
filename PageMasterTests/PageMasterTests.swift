@@ -1,15 +1,24 @@
 //
-//  PageViewControllerTests.swift
-//  PageViewControllerTests
+//  PageMasterTests.swift
+//  PageMaster
 //
 //  Created by Tomosuke Okada on 2019/02/09.
 //  Copyright © 2019 TomosukeOkada. All rights reserved.
 //
 
-import XCTest
-@testable import PageViewController
+/**
+ [PageMaster]
+ 
+ Copyright (c) [2019] [Tomosuke Okada]
+ 
+ This software is released under the MIT License.
+ http://opensource.org/licenses/mit-license.ph
+ */
 
-class PageViewControllerTests: XCTestCase {
+import XCTest
+@testable import PageMaster
+
+class PageMasterTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

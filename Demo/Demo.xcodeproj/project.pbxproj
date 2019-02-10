@@ -14,12 +14,24 @@
 		04765E39220EAB01000AC346 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04765E37220EAB01000AC346 /* LaunchScreen.storyboard */; };
 		04765E44220EAB01000AC346 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04765E43220EAB01000AC346 /* DemoTests.swift */; };
 		04765E4F220EAB02000AC346 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04765E4E220EAB02000AC346 /* DemoUITests.swift */; };
-		04765E71220EAE04000AC346 /* PageViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04765E6B220EAB4B000AC346 /* PageViewController.framework */; };
-		04765E72220EAE04000AC346 /* PageViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04765E6B220EAB4B000AC346 /* PageViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04765E78220EB0CC000AC346 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04765E77220EB0CC000AC346 /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0416A18122106CB3002DDF4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04765E65220EAB4B000AC346 /* PageMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04765E08220EAAE2000AC346;
+			remoteInfo = PageMaster;
+		};
+		0416A18322106CB3002DDF4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04765E65220EAB4B000AC346 /* PageMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04765E11220EAAE2000AC346;
+			remoteInfo = PageMasterTests;
+		};
 		04765E40220EAB01000AC346 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 04765E23220EAAFF000AC346 /* Project object */;
@@ -34,27 +46,6 @@
 			remoteGlobalIDString = 04765E2A220EAAFF000AC346;
 			remoteInfo = Demo;
 		};
-		04765E6A220EAB4B000AC346 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04765E65220EAB4B000AC346 /* PageViewController.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 04765E08220EAAE2000AC346;
-			remoteInfo = PageViewController;
-		};
-		04765E6C220EAB4B000AC346 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04765E65220EAB4B000AC346 /* PageViewController.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 04765E11220EAAE2000AC346;
-			remoteInfo = PageViewControllerTests;
-		};
-		04765E73220EAE04000AC346 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04765E65220EAB4B000AC346 /* PageViewController.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 04765E07220EAAE2000AC346;
-			remoteInfo = PageViewController;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,7 +55,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				04765E72220EAE04000AC346 /* PageViewController.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,7 +75,7 @@
 		04765E4A220EAB02000AC346 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04765E4E220EAB02000AC346 /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		04765E50220EAB02000AC346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04765E65220EAB4B000AC346 /* PageViewController.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PageViewController.xcodeproj; path = ../PageViewController.xcodeproj; sourceTree = "<group>"; };
+		04765E65220EAB4B000AC346 /* PageMaster.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PageMaster.xcodeproj; path = ../PageMaster.xcodeproj; sourceTree = "<group>"; };
 		04765E77220EB0CC000AC346 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04765E71220EAE04000AC346 /* PageViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0416A17D22106CB2002DDF4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0416A18222106CB3002DDF4D /* PageMaster.framework */,
+				0416A18422106CB3002DDF4D /* PageMasterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		04765E22220EAAFF000AC346 = {
 			isa = PBXGroup;
 			children = (
@@ -122,7 +120,7 @@
 				04765E42220EAB01000AC346 /* DemoTests */,
 				04765E4D220EAB02000AC346 /* DemoUITests */,
 				04765E2C220EAAFF000AC346 /* Products */,
-				04765E65220EAB4B000AC346 /* PageViewController.xcodeproj */,
+				04765E65220EAB4B000AC346 /* PageMaster.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,15 +166,6 @@
 			path = DemoUITests;
 			sourceTree = "<group>";
 		};
-		04765E66220EAB4B000AC346 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				04765E6B220EAB4B000AC346 /* PageViewController.framework */,
-				04765E6D220EAB4B000AC346 /* PageViewControllerTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		04765E76220EB0BC000AC346 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,7 +189,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				04765E74220EAE04000AC346 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -279,8 +267,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 04765E66220EAB4B000AC346 /* Products */;
-					ProjectRef = 04765E65220EAB4B000AC346 /* PageViewController.xcodeproj */;
+					ProductGroup = 0416A17D22106CB2002DDF4D /* Products */;
+					ProjectRef = 04765E65220EAB4B000AC346 /* PageMaster.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -293,18 +281,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		04765E6B220EAB4B000AC346 /* PageViewController.framework */ = {
+		0416A18222106CB3002DDF4D /* PageMaster.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = PageViewController.framework;
-			remoteRef = 04765E6A220EAB4B000AC346 /* PBXContainerItemProxy */;
+			path = PageMaster.framework;
+			remoteRef = 0416A18122106CB3002DDF4D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		04765E6D220EAB4B000AC346 /* PageViewControllerTests.xctest */ = {
+		0416A18422106CB3002DDF4D /* PageMasterTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = PageViewControllerTests.xctest;
-			remoteRef = 04765E6C220EAB4B000AC346 /* PBXContainerItemProxy */;
+			path = PageMasterTests.xctest;
+			remoteRef = 0416A18322106CB3002DDF4D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -375,11 +363,6 @@
 			isa = PBXTargetDependency;
 			target = 04765E2A220EAAFF000AC346 /* Demo */;
 			targetProxy = 04765E4B220EAB02000AC346 /* PBXContainerItemProxy */;
-		};
-		04765E74220EAE04000AC346 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PageViewController;
-			targetProxy = 04765E73220EAE04000AC346 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -532,7 +515,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PageViewControllerDemoApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = PageMasterDemoApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -553,7 +536,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PageViewControllerDemoApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = PageMasterDemoApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;

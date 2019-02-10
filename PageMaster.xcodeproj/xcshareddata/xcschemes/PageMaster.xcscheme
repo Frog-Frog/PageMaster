@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "04765E07220EAAE2000AC346"
-               BuildableName = "PageViewController.framework"
-               BlueprintName = "PageViewController"
-               ReferencedContainer = "container:PageViewController.xcodeproj">
+               BuildableName = "PageMaster.framework"
+               BlueprintName = "PageMaster"
+               ReferencedContainer = "container:PageMaster.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "04765E10220EAAE2000AC346"
-               BuildableName = "PageViewControllerTests.xctest"
-               BlueprintName = "PageViewControllerTests"
-               ReferencedContainer = "container:PageViewController.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "04765E07220EAAE2000AC346"
-            BuildableName = "PageViewController.framework"
-            BlueprintName = "PageViewController"
-            ReferencedContainer = "container:PageViewController.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -65,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04765E07220EAAE2000AC346"
-            BuildableName = "PageViewController.framework"
-            BlueprintName = "PageViewController"
-            ReferencedContainer = "container:PageViewController.xcodeproj">
+            BuildableName = "PageMaster.framework"
+            BlueprintName = "PageMaster"
+            ReferencedContainer = "container:PageMaster.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +64,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04765E07220EAAE2000AC346"
-            BuildableName = "PageViewController.framework"
-            BlueprintName = "PageViewController"
-            ReferencedContainer = "container:PageViewController.xcodeproj">
+            BuildableName = "PageMaster.framework"
+            BlueprintName = "PageMaster"
+            ReferencedContainer = "container:PageMaster.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
