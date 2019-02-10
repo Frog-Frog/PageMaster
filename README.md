@@ -23,7 +23,7 @@ import PageMaster
 
 private let pageMaster = PageMaster([])
 
-private func setupPageViewController() {
+private func setupPageMaster() {
     self.pageMaster.pageDelegate = self
     let vcList: [UIViewController] = [ /** Set your UIViewControllers */ ]
     self.pageMaster.setup(vcList)
