@@ -1,7 +1,7 @@
-# PageViewController
+# PageMaster
 
 ## Description
-PageViewController is a wrapper class for easier use of UIPageViewController.
+PageMaster is a wrapper class for easier use of UIPageViewController.
 
 ## Feature
 - Easier than UIPageViewController
@@ -13,31 +13,32 @@ PageViewController is a wrapper class for easier use of UIPageViewController.
 - Swift 4.2+
 
 ## Demo
-![pageviewcontroller](https://user-images.githubusercontent.com/20692907/52523149-86087900-2cd1-11e9-8acc-085115bef937.gif)
+![PageMaster](https://user-images.githubusercontent.com/20692907/52523149-86087900-2cd1-11e9-8acc-085115bef937.gif)
 
 ## Usage
 
 ### Setup
 ```swift
-import PageViewController
+import PageMaster
 
-private let pageViewController = PageViewController([])
+private let pageMaster = PageMaster([])
 
 private func setupPageViewController() {
-    self.pageViewController.pageDelegate = self
+    self.pageMaster.pageDelegate = self
     let vcList: [UIViewController] = [ /** Set your UIViewControllers */ ]
-    self.pageViewController.setup(vcList)
-    self.addChild(self.pageViewController)
-    self.view.addSubview(self.pageViewController.view)
-    self.pageViewController.view.frame = self.view.bounds
-    self.pageViewController.didMove(toParent: self)
+    self.pageMaster.setup(vcList)
+    self.addChild(self.pageMaster)
+    self.view.addSubview(self.pageMaster.view)
+    self.pageMaster.view.frame = self.view.bounds
+    self.pageMaster.didMove(toParent: self)
 }
 ```
 
 ### PageDelegate
 ```swift
-extension ViewController: PageViewControllerDelegate {
-    func pageViewController(_ vc: PageViewController, didChangePage page: Int) {
+extension ViewController: PageMasterDelegate {
+
+    func pageMaster(_ master: PageMaster, didChangePage page: Int) {
 	// Here you can create a process after changing the page.
     }
 }
@@ -49,14 +50,14 @@ extension ViewController: PageViewControllerDelegate {
 Add this to your Podfile.
 
 ```PodFile
-pod 'PageViewController'
+pod 'PageMaster'
 ```
 
 ### Carthage  
 Add this to your Cartfile.
 
 ```Cartfile
-github "PKPK-Carnage/PageViewController"
+github "PKPK-Carnage/PageMaster"
 ```
 
 ## Help
